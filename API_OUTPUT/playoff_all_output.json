@@ -1,0 +1,436 @@
+{
+    "PlayoffMatches": {
+        "round_1": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "TM-39",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "TM-33",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-55",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-35",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-48",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "TM-63",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-6",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "TM-29",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-53",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "TM-24",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-46",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-8",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-52",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-61",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-18",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-21",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-28",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-54",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-41",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-26",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-25",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-45",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-57",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "TM-34",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-2",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-31",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-42",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-23",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-27",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-7",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-12",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "TM-50",
+                        "score": 2
+                    }
+                }
+            ],
+            "Winners": [
+                "TM-33",
+                "TM-55",
+                "TM-63",
+                "TM-29",
+                "TM-24",
+                "TM-46",
+                "TM-52",
+                "TM-18",
+                "TM-28",
+                "TM-41",
+                "TM-25",
+                "TM-34",
+                "TM-2",
+                "TM-42",
+                "TM-27",
+                "TM-50"
+            ],
+            "Losers": [
+                "TM-39",
+                "TM-35",
+                "TM-48",
+                "TM-6",
+                "TM-53",
+                "TM-8",
+                "TM-61",
+                "TM-21",
+                "TM-54",
+                "TM-26",
+                "TM-45",
+                "TM-57",
+                "TM-31",
+                "TM-23",
+                "TM-7",
+                "TM-12"
+            ]
+        },
+        "round_2": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "TM-29",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-55",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-27",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-46",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-28",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-25",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-2",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-52",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-50",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-33",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-42",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-63",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-24",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "TM-41",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-18",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "TM-34",
+                        "score": 2
+                    }
+                }
+            ],
+            "Winners": [
+                "TM-29",
+                "TM-27",
+                "TM-28",
+                "TM-2",
+                "TM-50",
+                "TM-42",
+                "TM-41",
+                "TM-34"
+            ],
+            "Losers": [
+                "TM-55",
+                "TM-46",
+                "TM-25",
+                "TM-52",
+                "TM-33",
+                "TM-63",
+                "TM-24",
+                "TM-18"
+            ]
+        },
+        "quarterfinal": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "TM-42",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-29",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-41",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-2",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-34",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-50",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-27",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-28",
+                        "score": 1
+                    }
+                }
+            ],
+            "Winners": [
+                "TM-42",
+                "TM-41",
+                "TM-34",
+                "TM-27"
+            ],
+            "Losers": [
+                "TM-29",
+                "TM-2",
+                "TM-50",
+                "TM-28"
+            ]
+        },
+        "semifinal": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "TM-42",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "TM-41",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TM-27",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "TM-34",
+                        "score": 2
+                    }
+                }
+            ],
+            "Winners": [
+                "TM-41",
+                "TM-34"
+            ],
+            "Losers": [
+                "TM-42",
+                "TM-27"
+            ]
+        },
+        "bronzemedal": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "TM-27",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-42",
+                        "score": 0
+                    }
+                }
+            ],
+            "Winners": [
+                "TM-27"
+            ],
+            "Losers": [
+                "TM-42"
+            ]
+        },
+        "grandfinal": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "TM-41",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "TM-34",
+                        "score": 3
+                    }
+                }
+            ],
+            "Winners": [
+                "TM-34"
+            ],
+            "Losers": [
+                "TM-41"
+            ]
+        }
+    }
+}

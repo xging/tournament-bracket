@@ -1,0 +1,392 @@
+{
+    "PlayoffMatches": {
+        "round_1": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "Movistar",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "Kinguin",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "G2",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "Tricked",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "Nexon",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "GamerLegion",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "Secret",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "FaZe",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "Spartak",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "SG",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TYLOO",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "EG",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "NIP",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "HR",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "Epsilon",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "Vici",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "Dignitas",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "Winstrike",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "Navi",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "B8",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "M5",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "X6tence",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "Heroic",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "MOUZ",
+                        "score": 2
+                    }
+                }
+            ],
+            "Winners": [
+                "Humble",
+                "Complexity",
+                "Mason",
+                "Binary",
+                "Kinguin",
+                "G2",
+                "Nexon",
+                "FaZe",
+                "SG",
+                "TYLOO",
+                "HR",
+                "Epsilon",
+                "Winstrike",
+                "Navi",
+                "M5",
+                "MOUZ"
+            ],
+            "Losers": [
+                "Movistar",
+                "Tricked",
+                "GamerLegion",
+                "Secret",
+                "Spartak",
+                "EG",
+                "NIP",
+                "Vici",
+                "Dignitas",
+                "B8",
+                "X6tence",
+                "Heroic"
+            ]
+        },
+        "round_2": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "MOUZ",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "Complexity",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "TYLOO",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "Humble",
+                        "score": 0
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "G2",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "Kinguin",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "SG",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "Epsilon",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "M5",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "Mason",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "Winstrike",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "Binary",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "FaZe",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "Navi",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "HR",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "Nexon",
+                        "score": 1
+                    }
+                }
+            ],
+            "Winners": [
+                "Complexity",
+                "TYLOO",
+                "G2",
+                "Epsilon",
+                "Mason",
+                "Winstrike",
+                "Navi",
+                "HR"
+            ],
+            "Losers": [
+                "MOUZ",
+                "Humble",
+                "Kinguin",
+                "SG",
+                "M5",
+                "Binary",
+                "FaZe",
+                "Nexon"
+            ]
+        },
+        "quarterfinal": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "TYLOO",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "Epsilon",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "Mason",
+                        "score": 2
+                    },
+                    "Team2": {
+                        "name": "Navi",
+                        "score": 1
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "HR",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "G2",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "Winstrike",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "Complexity",
+                        "score": 2
+                    }
+                }
+            ],
+            "Winners": [
+                "TYLOO",
+                "Mason",
+                "G2",
+                "Complexity"
+            ],
+            "Losers": [
+                "Epsilon",
+                "Navi",
+                "HR",
+                "Winstrike"
+            ]
+        },
+        "semifinal": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "Mason",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "TYLOO",
+                        "score": 2
+                    }
+                },
+                {
+                    "Team1": {
+                        "name": "G2",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "Complexity",
+                        "score": 2
+                    }
+                }
+            ],
+            "Winners": [
+                "TYLOO",
+                "Complexity"
+            ],
+            "Losers": [
+                "Mason",
+                "G2"
+            ]
+        },
+        "bronzemedal": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "G2",
+                        "score": 1
+                    },
+                    "Team2": {
+                        "name": "Mason",
+                        "score": 2
+                    }
+                }
+            ],
+            "Winners": [
+                "Mason"
+            ],
+            "Losers": [
+                "G2"
+            ]
+        },
+        "grandfinal": {
+            "Matches": [
+                {
+                    "Team1": {
+                        "name": "Complexity",
+                        "score": 0
+                    },
+                    "Team2": {
+                        "name": "TYLOO",
+                        "score": 3
+                    }
+                }
+            ],
+            "Winners": [
+                "TYLOO"
+            ],
+            "Losers": [
+                "Complexity"
+            ]
+        }
+    }
+}

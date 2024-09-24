@@ -1,0 +1,58 @@
+{
+    "Divisions": [
+        "Division A"
+    ],
+    "Teams": [
+        {
+            "division_id": 1,
+            "teams": [
+                {
+                    "fullName": "NIP",
+                    "shortName": "NIP"
+                },
+                {
+                    "fullName": "Team Spirit",
+                    "shortName": "Spirit"
+                },
+                {
+                    "fullName": "Spartak Esports",
+                    "shortName": "Spartak"
+                },
+                {
+                    "fullName": "Natus Vincere",
+                    "shortName": "Navi"
+                },
+                {
+                    "fullName": "Mason",
+                    "shortName": "Mason"
+                },
+                {
+                    "fullName": "Gambit Esports",
+                    "shortName": "Gambit"
+                },
+                {
+                    "fullName": "SG Gaming",
+                    "shortName": "SG"
+                },
+                {
+                    "fullName": "Binary Dragons",
+                    "shortName": "Binary"
+                }
+            ]
+        }
+    ],
+    "Matches": [
+        {
+            "1": {
+                "Matches": {
+                    "NIP": {
+                        "Spirit": "2:1"
+                    },
+                    "Spirit": {
+                        "NIP": "1:2"
+                    }
+                }
+            }
+        }
+    ]
+}
