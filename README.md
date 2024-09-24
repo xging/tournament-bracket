@@ -76,5 +76,11 @@ api/generate-playoff-data/stage
 ('round_1','round_2','quarterfinal','semifinal','bronzemedal','grandfinal')
 
 
-
+## Database Tables
+### 1. MATCHES_HIST 
+-- (Store information of all passed matches)
+### 2. DIVISIONS 
+-- (Store information of all Divisions)
+### 3. TEAMS_MATCH 
+-- (Store information about 'Teams', 'Playoff Matches', and 'Final Result with Places and Points')
 
