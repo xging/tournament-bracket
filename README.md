@@ -60,9 +60,20 @@ localhost:8000/api/generate-match-data/4/random/all
 ### Generate one single division, listed teams, single match, all divisions.
 localhost:8000/api/generate-match-data/1/list/single/all
 
+## Playoff Matches
+### API Parameters:
 
+api/generate-playoff-data/stage
 
+### - stage: 'all','round_1','round_2','quarterfinal','semifinal','bronzemedal','grandfinal'
+-- (Which stage to generate)
 
+### Run API:
+### Default: localhost:8000/api/generate-playoff-data
+-- (By default will be used 'stage' => 'all')
+
+### Any Stage: localhost:8000/api/generate-playoff-data/round_1
+('round_1','round_2','quarterfinal','semifinal','bronzemedal','grandfinal')
 
 
 
