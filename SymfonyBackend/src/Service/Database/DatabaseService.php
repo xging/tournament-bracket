@@ -216,25 +216,29 @@ class DatabaseService implements DatabaseServiceInterface
     public function clearColumnMatches(string $stage): void
     {
         $conn = $this->em->getConnection();
+        $stageFlagName=$stage.'_flag';
         $teamCount = $this->em->getRepository(TeamsMatch::class)
-            ->count(['picked_flag' => true]);
+            ->count([$stageFlagName => true]);
 
         $filteredStages = [];
-        //TODO: Change logic for solo matches. (currently not working as expected)
+        
         switch (true) {
-            case $teamCount == 4 || $stage == 'semifinal':
+            case $teamCount == 4:
                 $filteredStages = [self::AVAILABLE_STAGES['semifinal']];
                 break;
-            case $teamCount > 4 && $teamCount <= 8 || $stage == 'quarterfinal':
+            case $teamCount > 4 && $teamCount <= 8:
                 $filteredStages = [self::AVAILABLE_STAGES['quarterfinal']];
                 break;
-            case $teamCount > 8 && $teamCount <= 16 || $stage == 'round_2':
+            case $teamCount > 8 && $teamCount <= 16:
                 $filteredStages = [self::AVAILABLE_STAGES['round_2']];
                 break;
-            case $teamCount > 16 && $teamCount <= 32 || $stage == 'round_1':
+            case $teamCount > 16 && $teamCount <= 32:
                 $filteredStages = [self::AVAILABLE_STAGES['round_1']];
                 break;
         }
+
+        $sql = 'UPDATE teams_match SET place = :value where '.$stageFlagName.' = 1';
+        $conn->executeStatement($sql, ['value' => 0]);
 
         foreach ($filteredStages as $stageName) {
             foreach ($stageName as $stagex) {

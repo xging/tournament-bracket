@@ -12,6 +12,7 @@ class AllMatchesService extends MatchService
 
     public function generateMatches(array $teams, int $numDiv, int $maxWins, array $match, array &$currentMatch, array $matchesList, $divId): array
     {
+        $matches = [];
         foreach ($teams as $division) {
             $divisionName = $this->databaseService->getDivisionName($division['division_id']);
             $this->logger->info("Division ID: {$division['division_id']}", ['Name' => $divisionName]);
@@ -25,8 +26,8 @@ class AllMatchesService extends MatchService
 
                     $score = $this->matchGenerator->generateMatchScore($team, $team2, $winnerTeams, $teamWinScore, $maxWins);
 
-                    $matches[$division['division_id']]['Matches'][$team['shortName']][$team2['shortName']] = $score;
-                    $matches[$division['division_id']]['Matches'][$team2['shortName']][$team['shortName']] = implode(':', array_reverse(explode(':', $score)));
+                    $matches[$division['division_id']]['Meetings'][$team['shortName']][$team2['shortName']] = $score;
+                    $matches[$division['division_id']]['Meetings'][$team2['shortName']][$team['shortName']] = implode(':', array_reverse(explode(':', $score)));
 
                     $this->databaseService->addMatchesHist($team['shortName'], $team2['shortName'], $score);
                 }
@@ -50,6 +51,6 @@ class AllMatchesService extends MatchService
 
         $this->logger->info("Loser Teams Name: {Team}", ['Team' => $loserTeamsName]);
 
-        return $matches;
+        return [$matches];
     }
 }

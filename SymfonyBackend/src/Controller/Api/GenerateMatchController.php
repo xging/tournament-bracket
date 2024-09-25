@@ -103,10 +103,18 @@ class GenerateMatchController extends AbstractController
     {
         $teams = [];
         $divisionNames = [];
+        $mixedArrayOfCacheKeys = ['divisionListArray', 'teamsListArray'];
+        
+        $divisionNames = $this->cacheService->cacheArray(key: $mixedArrayOfCacheKeys[0]);
+
+        if (!empty($divisionNames) && count($divisionNames)!==$numberOfDivisions) {
+            $this->cacheService->cacheArray(arr:$mixedArrayOfCacheKeys,action: 'delete');
+        }
 
         if ($matchType === MatchConfig::AVAILABLE_MATCH_TYPE[1]) {
-            $teams = $this->cacheService->cacheArray(key: 'teamsListArray');
-            $divisionNames = $this->cacheService->cacheArray(key: 'divisionListArray');
+            $teams = $this->cacheService->cacheArray(key: $mixedArrayOfCacheKeys[1]);
+            $divisionNames = $this->cacheService->cacheArray(key: $mixedArrayOfCacheKeys[0]);
+            
 
             if (empty($teams) || empty($divisionNames)) {
                 $this->clearData();

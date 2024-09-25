@@ -9,7 +9,7 @@ use App\Service\Cache\CacheServiceInterface;
 class CacheService implements CacheServiceInterface
 {
     private LoggerInterface $logger;
-    private const AVAILABLE_CACHE_KEY = ['teamsListArray', 'divisionListArray', 'matchesListArray'];
+    private const AVAILABLE_CACHE_KEY = ['teamsListArray', 'divisionListArray', 'matchesListArray', 'newMatches'];
     public function __construct(
         LoggerInterface $logger
     ) {
@@ -29,14 +29,22 @@ class CacheService implements CacheServiceInterface
         }
 
         if ($action == 'save') {
-            if($key == self::AVAILABLE_CACHE_KEY[2]) {
+            if ($key == self::AVAILABLE_CACHE_KEY[2] || $key == self::AVAILABLE_CACHE_KEY[3]) {
                 $keyList[] = $arr;
             } else {
                 $keyList = $arr;
             }
             $keyListCache->set($keyList);
-            $keyListCache->expiresAfter(5);
+            $keyListCache->expiresAfter(500);
             $cache->save($keyListCache);
+        }
+
+        if ($action == 'delete') {
+
+            // foreach ($arr as $keys) {
+            //     $cache->delete($keys);
+            // }
+            $cache->clear();
         }
 
         return $keyList;

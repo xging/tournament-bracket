@@ -15,7 +15,8 @@ class SingleMatchService extends MatchService
         $matchesList = $this->generateMatches($teams, $numDiv, $maxWins, $matches, $currentMatch, $matchesList, $divId);
 
         $this->cacheService->cacheArray($currentMatch, 'save', 'matchesListArray');
-        return $matchesList;
+        $matchesList2= $this->cacheService->cacheArray(key: 'newMatches');
+        return $matchesList2;
     }
 
     public function generateMatches(array $teamsA, int $numDiv, int $maxWins, array $match, array &$currentMatch, array $matchesList, $divId): array
@@ -41,6 +42,8 @@ class SingleMatchService extends MatchService
             }
             $winnerTeams = $this->cacheService->cacheArray($winnerTeams, 'save', $cacheKey);
 
+            $newMatch = [];
+
             foreach ($division['teams'] as $i => $team) {
                 $opponentFound = false;
                 $teamWinScore = array_fill_keys(array_column($division['teams'], 'shortName'), 0);
@@ -61,8 +64,13 @@ class SingleMatchService extends MatchService
 
                     $score = $this->matchGenerator->generateMatchScore($team, $team2, $winnerTeams, $teamWinScore, $maxWins);
 
-                    $newMatch[$division['division_id']]['Matches'][$team['shortName']][$team2['shortName']] = $score;
-                    $newMatch[$division['division_id']]['Matches'][$team2['shortName']][$team['shortName']] = implode(':', array_reverse(explode(':', $score)));
+                    // $newMatch[$division['division_id']]['Matches'][$team['shortName']][$team2['shortName']] = $score;
+                    // $newMatch[$division['division_id']]['Matches'][$team2['shortName']][$team['shortName']] = implode(':', array_reverse(explode(':', $score)));
+                    // $newMatch = $this->cacheService->cacheArray(key: 'newMatches');
+                    $newMatch[$division['division_id']]['Meetings'][$team['shortName']][$team2['shortName']] = $score;
+                    $newMatch[$division['division_id']]['Meetings'][$team2['shortName']][$team['shortName']] = implode(':', array_reverse(explode(':', $score)));
+                    
+                    $this->cacheService->cacheArray($newMatch, 'save', 'newMatches');
 
                     $this->databaseService->addMatchesHist($team['shortName'], $team2['shortName'], $score);
                     $opponentFound = true;
@@ -78,9 +86,9 @@ class SingleMatchService extends MatchService
                 }
             }
         }
+        // $matchesList2 = $this->cacheService->cacheArray(key: 'newMatches');
+        // $match[] = $newMatch;
 
-        $match[] = $newMatch;
-
-        return $match;
+        return $newMatch;
     }
 }
