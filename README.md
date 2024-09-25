@@ -5,7 +5,11 @@ Symfony PHP + MySQL Tournament Bracket
 ## Getting started
 
 ## MySQL
-### 1. Create new database:
+### 1. Start the MySQL Server:
+### `mysqld --console`
+### 1.2. Check MySQL Connection and create DB:
+### `mysql -u root -p`
+### 1.3. Create new database:
   ### `CREATE DATABASE your_db_name;`
 ### 2. Grant privileges to your db user:
   ### `GRANT ALL PRIVILEGES ON your_db_name.* TO 'your_mysql_user'@'localhost';`
