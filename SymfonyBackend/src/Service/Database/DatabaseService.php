@@ -215,35 +215,38 @@ class DatabaseService implements DatabaseServiceInterface
 
     public function clearColumnMatches(string $stage): void
     {
-        $conn = $this->em->getConnection();
-        $stageFlagName=$stage.'_flag';
-        $teamCount = $this->em->getRepository(TeamsMatch::class)
-            ->count([$stageFlagName => true]);
 
-        $filteredStages = [];
-        
-        switch (true) {
-            case $teamCount == 4:
-                $filteredStages = [self::AVAILABLE_STAGES['semifinal']];
-                break;
-            case $teamCount > 4 && $teamCount <= 8:
-                $filteredStages = [self::AVAILABLE_STAGES['quarterfinal']];
-                break;
-            case $teamCount > 8 && $teamCount <= 16:
-                $filteredStages = [self::AVAILABLE_STAGES['round_2']];
-                break;
-            case $teamCount > 16 && $teamCount <= 32:
-                $filteredStages = [self::AVAILABLE_STAGES['round_1']];
-                break;
-        }
+        if ($stage != 'all') {
+            
+            $conn = $this->em->getConnection();
+            $stageFlagName = $stage . '_flag';
+            $teamCount = $this->em->getRepository(TeamsMatch::class)
+                ->count([$stageFlagName => true]);
 
-        $sql = 'UPDATE teams_match SET place = :value where '.$stageFlagName.' = 1';
-        $conn->executeStatement($sql, ['value' => 0]);
+            $filteredStages = [];
+            switch (true) {
+                case $teamCount == 4:
+                    $filteredStages = [self::AVAILABLE_STAGES['semifinal']];
+                    break;
+                case $teamCount > 4 && $teamCount <= 8:
+                    $filteredStages = [self::AVAILABLE_STAGES['quarterfinal']];
+                    break;
+                case $teamCount > 8 && $teamCount <= 16:
+                    $filteredStages = [self::AVAILABLE_STAGES['round_2']];
+                    break;
+                case $teamCount > 16 && $teamCount <= 32:
+                    $filteredStages = [self::AVAILABLE_STAGES['round_1']];
+                    break;
+            }
 
-        foreach ($filteredStages as $stageName) {
-            foreach ($stageName as $stagex) {
-                $sql = 'UPDATE teams_match SET ' . $stagex . ' = :value';
-                $conn->executeStatement($sql, ['value' => 0]);
+            $sql = 'UPDATE teams_match SET place = :value where ' . $stageFlagName . ' = 1';
+            $conn->executeStatement($sql, ['value' => 0]);
+
+            foreach ($filteredStages as $stageName) {
+                foreach ($stageName as $stagex) {
+                    $sql = 'UPDATE teams_match SET ' . $stagex . ' = :value';
+                    $conn->executeStatement($sql, ['value' => 0]);
+                }
             }
         }
     }

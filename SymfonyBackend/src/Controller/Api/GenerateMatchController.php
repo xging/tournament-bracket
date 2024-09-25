@@ -89,9 +89,9 @@ class GenerateMatchController extends AbstractController
             }
 
             return new JsonResponse(data: [
+                'Matches' => $matchResult,
                 'Divisions' => $divisionNames,
-                'Teams' => $teams,
-                'Matches' => $matchResult
+                'Teams' => $teams
             ]);
 
         } catch (\Exception $e) {

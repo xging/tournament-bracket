@@ -15,8 +15,8 @@ class SingleMatchService extends MatchService
         $matchesList = $this->generateMatches($teams, $numDiv, $maxWins, $matches, $currentMatch, $matchesList, $divId);
 
         $this->cacheService->cacheArray($currentMatch, 'save', 'matchesListArray');
-        $matchesList2= $this->cacheService->cacheArray(key: 'newMatches');
-        return $matchesList2;
+
+        return $matchesList;
     }
 
     public function generateMatches(array $teamsA, int $numDiv, int $maxWins, array $match, array &$currentMatch, array $matchesList, $divId): array
@@ -64,11 +64,14 @@ class SingleMatchService extends MatchService
 
                     $score = $this->matchGenerator->generateMatchScore($team, $team2, $winnerTeams, $teamWinScore, $maxWins);
 
-                    // $newMatch[$division['division_id']]['Matches'][$team['shortName']][$team2['shortName']] = $score;
-                    // $newMatch[$division['division_id']]['Matches'][$team2['shortName']][$team['shortName']] = implode(':', array_reverse(explode(':', $score)));
-                    // $newMatch = $this->cacheService->cacheArray(key: 'newMatches');
-                    $newMatch[$division['division_id']]['Meetings'][$team['shortName']][$team2['shortName']] = $score;
-                    $newMatch[$division['division_id']]['Meetings'][$team2['shortName']][$team['shortName']] = implode(':', array_reverse(explode(':', $score)));
+
+                     //TODO:Need to fix matches output logic
+                    $newMatch[$division['division_id']]['Matches'][$team['shortName']][$team2['shortName']] = $score;
+                    $newMatch[$division['division_id']]['Matches'][$team2['shortName']][$team['shortName']] = implode(':', array_reverse(explode(':', $score)));
+
+
+                   
+            
                     
                     $this->cacheService->cacheArray($newMatch, 'save', 'newMatches');
 
@@ -86,9 +89,8 @@ class SingleMatchService extends MatchService
                 }
             }
         }
-        // $matchesList2 = $this->cacheService->cacheArray(key: 'newMatches');
-        // $match[] = $newMatch;
+        $match[] = $newMatch;
 
-        return $newMatch;
+        return $match;
     }
 }
